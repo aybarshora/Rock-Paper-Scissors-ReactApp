@@ -5,7 +5,8 @@ function Player({ name = "Player", score = 0, action = "rock" }) {
       <div className="player">
         <div className="score">{`${name}: ${score}`}</div>
         <div className="action">
-          {action && <ActionIcon action={action} size={60} />}
+          {action !== "" ? <ActionIcon action={action} size={60} /> : "Loading"}
+          {/* {action && <ActionIcon action={action} size={60} />} */}
         </div>
       </div>
     );
